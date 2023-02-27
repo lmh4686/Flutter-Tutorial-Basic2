@@ -2,6 +2,7 @@
 
 - with flutter_hooks(not ideal for state management)
 - with provider (use notifierListeners() and Consumer to trigger rebuild)
+- with flutter_riverpod mutable(changing values directly) state management solution
 
 # What I learned
 
