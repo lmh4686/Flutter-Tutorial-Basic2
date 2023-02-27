@@ -1,7 +1,5 @@
 //Ignore this page for flutter_hooks
-
 import 'dart:math';
-
 import 'package:flutter/foundation.dart';
 
 class RandomizerChangeNotifier extends ChangeNotifier {
@@ -15,7 +13,7 @@ class RandomizerChangeNotifier extends ChangeNotifier {
 
   void generateRandomNumber() {
     _generatedNumber = min + _randomGenerator.nextInt(max + 1 - min);
-    //rebuilds the app
+    //reference for rebuilding the app by 'Consumer' in randomizer_page.dart
     notifyListeners();
   }
 }
