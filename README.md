@@ -1,8 +1,3 @@
-# State management without library
+# State management with library
 
-- Form State Global Key
-- Navigator
-- Validator
-- Padding
-- Alignment
-- Math library
+- with flutter_hooks(not ideal)
