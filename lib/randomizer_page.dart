@@ -27,7 +27,7 @@ class RandomizerPage extends ConsumerWidget {
         label: const Text('Generate'),
         onPressed: () {
           //use 'ref.read' to ensure that any changes made to the RandomizerChangeNotifier state are reflected
-          ref.read(randomizerProvider).generateRandomNumber();
+          ref.read(randomizerProvider.notifier).generateRandomNumber();
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

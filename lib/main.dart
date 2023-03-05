@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_foundations/randomizer_change_notifier.dart';
+import 'package:flutter_foundations/randomizer_state_notifier.dart';
 import 'package:flutter_foundations/range_selector-page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -8,7 +8,7 @@ void main() {
 }
 
 //Used for ref.watch() argument no need to be defined in main
-final randomizerProvider = ChangeNotifierProvider((ref) => RandomizerChangeNotifier());
+final randomizerProvider = StateNotifierProvider<RandomizerStateNotifier, RandomizerState>((ref) => RandomizerStateNotifier());
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});

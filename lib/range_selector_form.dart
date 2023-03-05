@@ -24,7 +24,6 @@ class RangeSelectorTextFormFields extends StatelessWidget {
       ),
       //int.tryParse(value) returns int if the given string is convertible else return null
       //By default, validator has a argument which automatically get assigned the current state which is typed in the text box.
-      //This is independent from the state _min and _max.
       validator: (value) {
         if (value == null || int.tryParse(value) == null) {
           return 'Must be an integer';
@@ -60,7 +59,7 @@ class RangeSelectorForm extends ConsumerWidget {
             RangeSelectorTextFormFields(
               labelText: 'Minimum',
               //read current state of randomizerProvider using 'ref.read'
-              intValueSetter: (value) => ref.read(randomizerProvider).min = value,
+              intValueSetter: (value) => ref.read(randomizerProvider.notifier).setMin(value),
             ),
             const SizedBox(
               height: 12,
@@ -68,7 +67,7 @@ class RangeSelectorForm extends ConsumerWidget {
             RangeSelectorTextFormFields(
               labelText: 'Maximum',
               //read current state of randomizerProvider using 'ref.read'
-              intValueSetter: (value) => ref.read(randomizerProvider).max = value,
+              intValueSetter: (value) => ref.read(randomizerProvider.notifier).setMax(value)
             )
           ],
         ),
